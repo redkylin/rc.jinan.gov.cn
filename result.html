@@ -1,0 +1,94 @@
+
+
+
+
+ 
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,initial-scale=1.0"/>
+<title>微官网</title>
+<!-- <link href="css/style.css" type="text/css" rel="stylesheet"> -->
+<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+<script>
+$(function(){
+	 $("#return").click(function(){
+		 window.location="https://rc.jinan.gov.cn/jnrcfw/wechat/index.jsp?menu="
+	});
+});
+$(function(){
+	 $("#back").click(function(){
+		 WeixinJSBridge.call('closeWindow');
+	});
+});
+</script>
+<style>
+body, form{padding:0px; margin:0px;}
+body{overflow:hidden;background-image:url("images/error_bg.jpg"); background-size:cover;}
+#main{width:100%; height:100%; overflow:auto;}
+#introduce{position:absolute; left:50%; top:50%; height:300px; width:400px; margin:0px; margin-top:-170px; margin-left:-200px; padding:0px;}
+#introduce table{width:100%; margin:0px; padding:0px;font-size:16pt;}
+#return{font-size:16pt;border-radius:8px;padding:4px;width:150px;}
+#back{font-size:16pt;border-radius:8px;padding:4px;width:150px;}
+</style>
+</head>
+<body>
+<div id="main"></div>
+<div id="introduce">
+<table cellpadding="0" cellspacing="0">
+	<tr>
+		<td align="center" height="100px" style="padding:0 30px;">
+			确认成功。<br/><br/><span id="resultText"></span>欢迎您！ <br/><br/><!-- ...<span id="time"></span>秒后跳转到首页 -->
+		</td>
+	</tr>
+	<tr>
+		<td align="center" height="30px">
+			<input type="button" id="return" value="返回首页"/>
+		</td>
+	</tr>
+</table>
+</div>
+</body>
+<!-- <script language="javascript" > 
+function countDown(secs){
+	$("#time").text(secs);
+	if(--secs>0){
+		setTimeout("countDown("+secs+")",1000);
+    }else{
+     	location.href="index.jsp";
+    }
+} 
+countDown(3); 
+</script>  -->
+<script>
+pushHistory(); 
+window.addEventListener("popstate", function(e) { 
+    //alert("我监听到了浏览器的返回按钮事件啦");//根据自己的需求实现自己的功能
+	window.location="https://rc.jinan.gov.cn/jnrcfw/wechat/index.jsp?menu=";
+}, false); 
+function pushHistory() { 
+	var state = { 
+		title: "title", 
+		url: "#"
+	}; 
+	window.history.pushState(state, "title", "#"); 
+// 获取URL中的查询参数
+function getQueryParameter(param) {
+            var urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // 获取传递的input参数
+        var inputText = getQueryParameter('input');
+
+        // 显示传递过来的参数
+        if (inputText !== null && inputText.trim() !== "") {
+            document.getElementById('resultText').innerText =  decodeURIComponent(inputText);
+        } else {
+            document.getElementById('resultText').innerText = "没有传递任何内容。";
+        }
+}
+</script>
+</html>

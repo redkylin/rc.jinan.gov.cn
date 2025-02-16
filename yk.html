@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,initial-scale=1.0"/>
+<title>人才服务金卡</title>
+<link href="css/content.css" type="text/css" rel="stylesheet">
+<link href="css/style.css" type="text/css" rel="stylesheet">
+<script src="js/jquery-1.12.4.min.js"></script>
+<script src="js/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/utils.js"></script>
+<style>
+body{background-color:#ffffff;}
+.container{background-color:#ffffff;}
+.btn {
+            background-color: #5bc3e8; /* 按钮背景颜色 */
+            border: none; /* 去掉边框 */
+            color: white; /* 按钮文字颜色 */
+            padding: 10px 100px; /* 按钮内边距 */
+            text-align: center; /* 文字居中 */
+            text-decoration: none; /* 去掉文字下划线 */
+            display: inline-block;
+            font-size: 16px; /* 文字大小 */
+            border-radius: 5px; /* 设置圆角 */
+            cursor: pointer; /* 鼠标悬停时变为手形 */
+            transition: background-color 0.3s ease; /* 增加背景颜色过渡效果 */
+        }
+
+
+</style>
+</head>
+<body>
+  <section class="biaoti003">
+     <figure class="jp1">
+	   <figcaption><img src="images/jp001.jpg"></figcaption>
+	 </figure>
+	 <figure class="tit">
+	   <figcaption><a href="index.jsp">首页</a>>人才分类信息</figcaption>
+	 </figure>
+	
+	 
+  </section>
+  <section class="art">
+	<figure style="height:30px;" >
+	  <figcaption id="displayText" style="width:100%;float:left;font-size:20px;color:#000000;"> </figcaption>
+	 
+	</figure>
+ </section>  
+ <section class="biaoti004">
+	<img src="images/kun.jpg"/>
+ </section>
+ <section  >
+	<figure style="height:30px;" >
+	  <figcaption style="text-indent: 43px;width:100%;float:left;font-size:20px;color:#000000; margin-top: 5%; padding-bottom: 5%;   border-bottom:1px solid #d2d2d2; " >经济南人才网认证，人才信息真实有效，享受绿色通道服务。</figcaption>
+	</figure>
+ </section>  
+ <section class="art"  >
+	<figure style="height:30px;" >
+	  <figcaption style="text-indent: 43px;width:100%;float:left;font-size:20px;color:#000000; margin-top: 5%; padding-bottom: 5%;   border-bottom:1px solid #d2d2d2; " ><button class="btn" onclick="redirectToPage()">确定</button><p style="text-align: center;font-size:20px;color:#000000;font-weight: normal;">(工作人员点击有效)</p></figcaption>
+	</figure>
+ </section>  
+ 
+ <script>
+	var userInput = "";
+
+	// 网页加载时弹出输入框，并将输入内容显示到页面上
+	window.onload = function() {
+		userInput = prompt("请输入一些文字："); // 弹出输入文本框
+		if (userInput !== null && userInput.trim() !== "") {
+			document.getElementById("displayText").innerText =  userInput;
+		} else {
+			document.getElementById("displayText").innerText = "你没有输入任何内容。";
+		}
+	};
+
+	// 定义点击按钮时的跳转逻辑
+	function redirectToPage() {
+            if (userInput !== null && userInput.trim() !== "") {
+                var encodedInput = encodeURIComponent(userInput);
+                var targetUrl = "result.html?input=" + encodedInput;
+                window.location.href = targetUrl;
+            } else {
+                alert("请先输入文本！");
+            }
+        }
+</script>
+</body>
+</html> 

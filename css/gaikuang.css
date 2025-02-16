@@ -1,0 +1,14 @@
+*{ margin:0; padding:0;}body{ height:100%; width:100%;background-color:#f6f6f6; }
+ul{ list-style:none;}
+a{ text-decoration:none; color:#1c3241; }
+/*头部样式*/
+
+.biaoti003{ width:100%; height:50px;line-height:50px;border-bottom:1px solid #d2d2d2; background-color:#FFFFFF; border-top:1px solid #d2d2d2;display:flex;}
+.jp1{ width:35px; height:35px; margin-left:15px;margin-right:5px; line-height:35px; margin-top:8px;}
+.jp2{ width:26px; height:26px; line-height:26px; margin-right:15px; margin-top:12px;}
+.tit{ flex:1; font-size:16px; color:#333333; font-weight:bold;}
+
+.main{display:block; width:100%; position:relative; height:100%; z-index:-1;}
+.main .bg img{ position:fixed;width:100%; height:100%; z-index:10; }
+.main .font a{ width:44%; height:100px; position:relative; float:left; padding-bottom:5%; }
+.main .font img{ width:30%; margin:0 auto; position:fixed; margin-top:30%; z-index:100;}

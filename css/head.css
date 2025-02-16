@@ -1,0 +1,10 @@
+.dh_bg{ width:100%; height:10em; background-image:url(../images/bg.jpg); background-size:100% 100%; background-repeat:no-repeat;  }
+.dh_bg .fa{ width:100%; height:30px;line-height:30px;font-family:"Î¢ÈíÑÅºÚ"; font-weight:bold; font-size:1.4em; color:#FFFFFF; display:flex;}
+.dh_bg .fa img{ width:31px; height:24px;margin-top:30px; margin-left:12px;}
+.dh_bg .fa figcaption{flex:1; margin-top:28px;margin-left:30px;}
+.dh_bg .fb{ width:100%; height:15px;text-indent:42px;margin-top:45px;line-height:15px;font-family:Arial, Helvetica, sans-serif; font-weight:bold; font-size:0.5em; color:#FFFFFF;}
+.dh_bg .fc{ width:100%; height:15px;text-indent:42px;margin-top:10px;line-height:15px;font-family:"Î¢ÈíÑÅºÚ"; font-weight:bold; font-size:0.8em; color:#FFFFFF;}
+.dh_bg_hyyc{ width:100%; height:10em; background-image:url(../images/bg_hyyc_head.jpg); background-size:100% 100%; background-repeat:no-repeat;  }
+.dh_bg_hyyc .fa{ width:100%; height:30px;line-height:30px;font-family:"Î¢ÈíÑÅºÚ"; font-weight:bold; font-size:1.4em; color:#FFFFFF; display:flex;}
+.dh_bg_hyyc .fa img{ width:31px; height:24px;margin-top:30px; margin-left:12px;}
+.dh_bg_hyyc .fa figcaption{flex:1; margin-top:45px;margin-left:30px;}
